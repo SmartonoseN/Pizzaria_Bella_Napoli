@@ -2,12 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
@@ -16,7 +15,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="974.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.simeon.pizzaria_bella_napoli.homePageController">
    <children>
@@ -104,12 +102,12 @@
             <Separator blendMode="LIGHTEN" orientation="VERTICAL" prefHeight="19.0" prefWidth="21.0" />
             <FlowPane>
                <children>
-                  <Label prefHeight="18.0" prefWidth="212.0" text="Mitarbeiter">
+                  <Label prefHeight="18.0" prefWidth="129.0" text="Mitarbeiter">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="employeeList" prefHeight="24.0" prefWidth="255.0" />
+                  <ComboBox fx:id="employeeMenu" prefHeight="24.0" prefWidth="342.0" />
                </children>
             </FlowPane>
          </children>
@@ -135,19 +133,19 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <MenuButton fx:id="pizzaMenu" mnemonicParsing="false" prefHeight="28.0" prefWidth="312.0" text="Pizza Menu">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </MenuButton>
+                  <ComboBox fx:id="pizzaMenu" onAction="#handlePizzaMenu" prefHeight="24.0" prefWidth="315.0" />
                </children>
             </FlowPane>
             <Separator blendMode="SOFT_LIGHT" orientation="VERTICAL" prefHeight="38.0" prefWidth="21.0" />
             <ListView fx:id="orderedPizza" prefHeight="223.0" prefWidth="462.0" />
+            <Separator blendMode="SOFT_LIGHT" orientation="VERTICAL" prefHeight="38.0" prefWidth="21.0" />
+            <FlowPane>
+               <children>
+                  <Label prefHeight="16.0" prefWidth="128.0" text="Summe:" />
+                  <Separator prefHeight="0.0" prefWidth="241.0" visible="false" />
+                  <TextField fx:id="priceTextField" editable="false" prefHeight="24.0" prefWidth="87.0" />
+               </children>
+            </FlowPane>
             <Separator blendMode="SOFT_LIGHT" orientation="VERTICAL" prefHeight="91.0" prefWidth="21.0" />
             <Label prefHeight="16.0" prefWidth="147.0" text="Info Box:">
                <font>
