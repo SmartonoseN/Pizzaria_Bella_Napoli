@@ -92,7 +92,7 @@
                   </Label>
                   <TextField fx:id="clientZip" prefHeight="24.0" prefWidth="115.0" />
                   <Separator prefHeight="8.0" prefWidth="134.0" visible="false" />
-                  <CheckBox fx:id="inCity" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Stadt">
+                  <CheckBox fx:id="inCity" mnemonicParsing="false" onAction="#handleCheckBoxClick" prefHeight="25.0" prefWidth="97.0" text="Stadt">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -141,7 +141,7 @@
             <Separator blendMode="SOFT_LIGHT" orientation="VERTICAL" prefHeight="38.0" prefWidth="21.0" />
             <FlowPane>
                <children>
-                  <Label prefHeight="16.0" prefWidth="128.0" text="Summe:" />
+                  <Label prefHeight="16.0" prefWidth="128.0" text="Summe :" />
                   <Separator prefHeight="0.0" prefWidth="241.0" visible="false" />
                   <TextField fx:id="priceTextField" editable="false" prefHeight="24.0" prefWidth="87.0" />
                </children>
